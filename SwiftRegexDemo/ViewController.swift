@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             ]
         
         regexes = patterns.map {
-            try? NSRegularExpression(pattern: $0, options: .CaseInsensitive)
+            try! NSRegularExpression(pattern: $0, options: .CaseInsensitive)
         }
         
         visaTextField.keyboardType = UIKeyboardType.NumberPad
@@ -60,6 +60,8 @@ class ViewController: UIViewController {
        
         
         let valid = matchRange.location != NSNotFound
+        
+
         
         if valid == false {
             textField.toggleField()
@@ -107,6 +109,12 @@ class ViewController: UIViewController {
         }
 
         
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.visaTextField.resignFirstResponder()
+        self.masterTextField.resignFirstResponder()
+        self.amexTextField.resignFirstResponder()
     }
     
     func displayAlertMessage(userMessage: String)
