@@ -1,25 +1,165 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IKF-f5-FOC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--What kind of credit card is this?-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftRegexDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yTf-s7-fBa">
+                                <rect key="frame" x="32" y="143" width="350" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3xw-fV-maX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What kind of credit card is this?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TO-gb-hQZ">
+                                <rect key="frame" x="87" y="70" width="241" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ViQ-Xx-1hw">
+                                <rect key="frame" x="32" y="229" width="350" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFE-9s-5F5">
+                                <rect key="frame" x="32" y="341" width="350" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="HTU-IT-l6W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this Visa?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbs-yq-mVX">
+                                <rect key="frame" x="32" y="114" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this MasterCard?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3s-Jo-Aox">
+                                <rect key="frame" x="32" y="208" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this American Express?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5t-rp-A1d">
+                                <rect key="frame" x="32" y="312" width="195" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYV-0V-AVw">
+                                <rect key="frame" x="32" y="417" width="350" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.54901960780000003" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="YPK-uc-pvq"/>
+                                </constraints>
+                                <state key="normal" title="Validate using NSRegularExpression">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="validateWithNSRegularExpressionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fBX-fl-eqW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejD-WY-g4T">
+                                <rect key="frame" x="32" y="500" width="350" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.54901960780000003" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bxM-Y3-k74"/>
+                                </constraints>
+                                <state key="normal" title="Validate using NSPredicate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="validateWithNSPredicateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xES-8G-5ND"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="top" secondItem="1TO-gb-hQZ" secondAttribute="bottom" constant="86" id="8fJ-I8-c5p"/>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="leading" secondItem="ViQ-Xx-1hw" secondAttribute="leading" id="Chm-oS-HtP"/>
+                            <constraint firstItem="SYV-0V-AVw" firstAttribute="top" secondItem="kFE-9s-5F5" secondAttribute="bottom" constant="67" id="Fpi-YG-Ivs"/>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="leading" secondItem="G3s-Jo-Aox" secondAttribute="leading" id="ILV-y3-QNv"/>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="143" id="Mli-me-CFb"/>
+                            <constraint firstItem="SYV-0V-AVw" firstAttribute="top" secondItem="kFE-9s-5F5" secondAttribute="bottom" constant="32" id="NGh-1I-3NS"/>
+                            <constraint firstItem="kFE-9s-5F5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="341" id="Oan-BT-zuH"/>
+                            <constraint firstItem="kFE-9s-5F5" firstAttribute="top" secondItem="G5t-rp-A1d" secondAttribute="bottom" constant="8" symbolic="YES" id="SGT-69-gjH"/>
+                            <constraint firstItem="ejD-WY-g4T" firstAttribute="trailing" secondItem="SYV-0V-AVw" secondAttribute="trailing" id="WI6-EP-Svo"/>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="top" secondItem="gbs-yq-mVX" secondAttribute="bottom" constant="8" symbolic="YES" id="Xo1-c1-iQc"/>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="trailing" secondItem="ViQ-Xx-1hw" secondAttribute="trailing" id="Yzf-EB-3Iz"/>
+                            <constraint firstItem="G3s-Jo-Aox" firstAttribute="top" secondItem="yTf-s7-fBa" secondAttribute="bottom" constant="21" id="Zw4-fU-j7L"/>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="leading" secondItem="kFE-9s-5F5" secondAttribute="leading" id="a19-PH-PWR"/>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="cXU-zD-o2a"/>
+                            <constraint firstItem="SYV-0V-AVw" firstAttribute="leading" secondItem="kFE-9s-5F5" secondAttribute="leading" id="cbZ-Us-siS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ejD-WY-g4T" secondAttribute="bottom" constant="138" id="cio-Gc-G94"/>
+                            <constraint firstItem="ViQ-Xx-1hw" firstAttribute="top" secondItem="G3s-Jo-Aox" secondAttribute="bottom" id="g6I-9d-HjA"/>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jZp-n8-Byk"/>
+                            <constraint firstItem="1TO-gb-hQZ" firstAttribute="centerX" secondItem="yTf-s7-fBa" secondAttribute="centerX" id="kAr-uZ-Uao"/>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="trailing" secondItem="kFE-9s-5F5" secondAttribute="trailing" id="kFg-R4-WUj"/>
+                            <constraint firstItem="ejD-WY-g4T" firstAttribute="top" secondItem="SYV-0V-AVw" secondAttribute="bottom" constant="39" id="ke5-xz-rI8"/>
+                            <constraint firstItem="ejD-WY-g4T" firstAttribute="leading" secondItem="SYV-0V-AVw" secondAttribute="leading" id="mVL-0D-QeQ"/>
+                            <constraint firstItem="G5t-rp-A1d" firstAttribute="top" secondItem="ViQ-Xx-1hw" secondAttribute="bottom" constant="39" id="nsG-ub-XdC"/>
+                            <constraint firstItem="SYV-0V-AVw" firstAttribute="trailing" secondItem="kFE-9s-5F5" secondAttribute="trailing" id="phe-mg-f5s"/>
+                            <constraint firstItem="ejD-WY-g4T" firstAttribute="top" secondItem="SYV-0V-AVw" secondAttribute="bottom" constant="58" id="uId-zJ-I23"/>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="leading" secondItem="G5t-rp-A1d" secondAttribute="leading" id="v4C-pQ-loR"/>
+                            <constraint firstItem="yTf-s7-fBa" firstAttribute="leading" secondItem="gbs-yq-mVX" secondAttribute="leading" id="vj2-eO-ndy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1TO-gb-hQZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Fpi-YG-Ivs"/>
+                                <exclude reference="uId-zJ-I23"/>
+                                <exclude reference="cio-Gc-G94"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="What kind of credit card is this?" id="6cd-P2-AW5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="amexTextField" destination="kFE-9s-5F5" id="DO9-ly-8TL"/>
+                        <outlet property="masterTextField" destination="ViQ-Xx-1hw" id="aIc-FV-BZe"/>
+                        <outlet property="visaTextField" destination="yTf-s7-fBa" id="a8F-0g-9Qp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1192" y="321"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yke-pW-7zV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IKF-f5-FOC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yC8-MI-SB3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DYi-bl-x2Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5GT-Nq-Aqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="321"/>
         </scene>
     </scenes>
 </document>
